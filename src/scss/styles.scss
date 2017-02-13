@@ -4,11 +4,226 @@
 
 body{
 	font-family: Helvetica, Arial, sans-serif;
+	font-size: 0;
+	margin: 0;
 }
 
-h1 {
-	font-size: 300px;
+img {
+  width: 100%;
+  display: block;
+}
+
+h3{
+	margin-bottom: 0;
+}
+
+.navigation{
+	font-size: 13px;
+	background-color: #f5f5f5;
+}
+
+.nav-container{
+	vertical-align: top;
+}
+
+.github-logo{
+	width: 30px;
+	display: inline-block;
+	padding-top: 12px;
+	padding-bottom: 10px;
+	margin-left: 100px;
+}
+
+.search-bar{
+	width: 30%;
+	font-size: 13px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 15px;
+	margin-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 6px;
+}
+
+.tabs{
+	display: inline-block;
+	font-weight: bolder;
+}
+
+.tabs-container{
+	display: inline-block;
+	width: 30%;
+	vertical-align: top;
+	padding-top: 20px;
+	margin-left: 10px;
+}
+
+.tabs.tab-padding{
+	padding-left: 10px;
+}
+
+.icons{
+	display: inline-block;
+	width: 20%;
+	vertical-align: top;
+	float: right;
+}
+
+.larger-icon{
+	font-size: 18px;
+	margin-top: 5px;
+}
+
+.img-caret{
+	display: inline-block;
+	width: 40%;
+	vertical-align: top;
+}
+
+.plus-caret{
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px;
+}
+
+.fa.fa-caret-down{
+	padding-top: 25px;
+}
+
+.fa.fa-bell{
+	padding-right: 30px;
+}
+
+.icon{
+	width: 20px;
+	display: inline-block;
+	margin-bottom: 2px;
+	vertical-align: top;
+	padding-top: 15px;
+}
+
+.thumbnail-img{
+	width: 25px;
+	display: inline-block;
+	padding-top: 17px;
+	vertical-align: top;
+}
+
+.content-container{
+	font-size: 12px;
+	font-family: sans-serif;
+	font-weight: lighter;
+}
+
+.content-container img{
+	width: 250px;
+	border-radius: 10px;
+
+}
+
+.content-container h1{
+	margin-bottom: 0;
+}
+.content-container h2{
+	color: #666666;
+	margin: 0;
+}
+
+.fa.profile-icon{
+	padding-right: 5px;
+}
+
+.profile-container{
+	width: 27%;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 70px;
+	padding-top: 20px;
+}
+
+.repos-container{
+	width: 60%;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 50px;
+}
+
+.search-repos .repos-search-bar{
+	width: 50%;
+	font-size: 13px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 15px;
+	margin-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 6px;
+	margin-bottom: 13px;
+	margin-right: 20px;
+}
+
+.search-repos .new-repo-button{
+	width: 10%;
+	display: inline-block;
+	float: right;
+	background-color: #7ec85c;
+	margin-top: 6px;
+	color: white;
 	text-align: center;
-	color: chartreuse;
-	font-size: 12vw;
+	font-size: 14px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-radius: 3px;
+	font-weight: bolder;
+}
+
+.search-repos .Type-repo-button{
+	width: 15%;
+	display: inline-block;
+	background-color: #ebebeb;
+	margin-top: 6px;
+	text-align: center;
+	font-size: 14px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-radius: 3px;
+	font-weight: bolder;
+}
+
+.search-repos .language-repo-button{
+	width: 17.5%;
+	display: inline-block;
+	background-color: #ebebeb;
+	margin-top: 6px;
+	text-align: center;
+	font-size: 14px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-radius: 3px;
+	font-weight: bolder;
+}
+
+.repos-container ul{
+	list-style: none;
+	font-size: 14px;
+	padding-left: 0px;
+}
+
+.repos-container li{
+	padding-bottom: 10px;
+	color: #666666;
+}
+
+.repos-nav{
+	margin-top: 65px;
+	margin-bottom: 30px;
+
+}
+
+.repos-nav div{
+	display: inline-block;
+	width: 19%;
+	font-size: 16px;
+	text-align: center;
 }
