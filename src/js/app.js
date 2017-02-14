@@ -4,17 +4,24 @@ var forEach = function(arr,cb){for(var i = 0; i < arr.length; i++){ cb(arr[i], i
 
 var inputNewContent = document.querySelector('.content-container')
 
-var userProfile = 'cameronbolus'
 var userSearch = document.querySelector('.search-bar')
 
 userSearch.addEventListener('keydown', function(event){
   var searchBarValue = userSearch.value
   if (event.which === 13) {
-    userProfile = searchBarValue
+    console.log(searchBarValue)
+    window.location.hash = searchBarValue
   }
 })
 
 function controllerRouter(){
+  var userProfile = window.location.hash.slice(1)
+
+  if(userProfile === ''){
+    userProfile = 'cameronbolus'
+  }
+  console.log(userProfile)
+
   inputNewContent.innerHTML = `
     <div class="profile-container">
     </div>
@@ -42,11 +49,14 @@ function controllerRouter(){
   `
 
   $.getJSON(`https://api.github.com/users/${userProfile}`).then(function(serverRes){
+    console.log(userProfile)
     var profileContainer = document.querySelector('.profile-container')
     var htmlTemplate = createGitHubProfileInfo(serverRes, "Cameron-info")
     profileContainer.innerHTML = htmlTemplate
   })
   $.getJSON(`https://api.github.com/users/${userProfile}/repos`).then(function(serverRes){
+    console.log(userProfile)
+
     var reposContainer = document.querySelector('.repos-container .repos-list')
     var htmlTemplate = createGitHubRepos(serverRes, "Cameron-repos")
     reposContainer.innerHTML = htmlTemplate
@@ -61,13 +71,14 @@ function controllerRouter(){
 //////API functions//////
 
 function createGitHubProfileInfo(dataObj, profileInfo){
-
+  var searchBarValue = userSearch.value
+  var userProfileName = searchBarValue
   var largeHtmlString = ''
 
   return largeHtmlString += `
     <img src="${dataObj.avatar_url}">
     <h1>${dataObj.name}</h1>
-    <h2>cameronbolus</h2>
+    <h2>${userProfileName}</h2>
     <hr/>
     <h4><i class="fa fa-link profile-icon" aria-hidden="true"></i>${dataObj.blog}</h4>
     <h4><i class="fa fa-map-marker profile-icon" aria-hidden="true">  </i>${dataObj.location}</h4>
